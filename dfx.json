@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "memorycardgame_backend": {
+      "main": "src/memorycardgame_backend/main.mo",
+      "type": "motoko"
+    },
+    "memorycardgame_frontend": {
+      "dependencies": [
+        "memorycardgame_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/memorycardgame_frontend/src/index.html"
+      },
+      "source": [
+        "src/memorycardgame_frontend/assets",
+        "dist/memorycardgame_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
